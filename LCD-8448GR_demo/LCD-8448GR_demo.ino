@@ -43,7 +43,7 @@ void setup() {
   nokia.begin();
   draw_init(DISPLAY_WIDTH, DISPLAY_HEIGHT, 1);
   draw_fonts_init();
-  logo(8, 0);
+  draw_logo(8, 0);
 }
 
 void loop() {
@@ -54,7 +54,7 @@ void drv_paint() {
   nokia.writeRAM(draw_buffer);
 }
 
-void logo(uns16 x, uns16 y) {
+void draw_logo(uns16 x, uns16 y) {
   draw_clear_screen();
   delay(100);
   draw_bitmap(x, y, 1, e_big_bitmap);
